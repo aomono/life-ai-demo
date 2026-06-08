@@ -1,0 +1,87 @@
+[
+  {
+    "id": "h001",
+    "name": "佐藤 健一",
+    "age": 45,
+    "gender": "male",
+    "family": "配偶者・子 2 人 (12 歳・9 歳)",
+    "occupation": "メーカー営業部 管理職",
+    "existingPolicies": [
+      {
+        "type": "定期死亡保険",
+        "monthlyPremium": 8400,
+        "coverageSummary": "保険金 1,500 万 / 10 年定期"
+      },
+      {
+        "type": "医療保険",
+        "monthlyPremium": 4800,
+        "coverageSummary": "入院日額 5,000 円 / 60 歳払込終了"
+      }
+    ],
+    "healthMetrics": {
+      "bmi": 27.8,
+      "bloodPressure": { "systolic": 142, "diastolic": 92 },
+      "hba1c": 6.1,
+      "ldl": 156,
+      "smoking": "current",
+      "alcoholPerWeek": 5,
+      "averageSteps": 4200,
+      "averageSleepHours": 5.6
+    }
+  },
+  {
+    "id": "h002",
+    "name": "田中 美咲",
+    "age": 34,
+    "gender": "female",
+    "family": "配偶者・子 1 人 (2 歳)",
+    "occupation": "IT 企業 時短勤務",
+    "existingPolicies": [
+      {
+        "type": "医療保険 (女性疾病特約)",
+        "monthlyPremium": 3200,
+        "coverageSummary": "入院日額 5,000 円 / 終身"
+      },
+      {
+        "type": "学資保険",
+        "monthlyPremium": 12000,
+        "coverageSummary": "18 歳満期 / 300 万"
+      }
+    ],
+    "healthMetrics": {
+      "bmi": 21.4,
+      "bloodPressure": { "systolic": 112, "diastolic": 72 },
+      "hba1c": 5.3,
+      "ldl": 102,
+      "smoking": "never",
+      "alcoholPerWeek": 0.25,
+      "averageSteps": 7600,
+      "averageSleepHours": 6.8
+    }
+  },
+  {
+    "id": "h003",
+    "name": "山口 隆",
+    "age": 58,
+    "gender": "male",
+    "family": "配偶者 (子は独立)",
+    "occupation": "建設会社 自営業 (一人法人)",
+    "existingPolicies": [
+      {
+        "type": "終身保険",
+        "monthlyPremium": 16500,
+        "coverageSummary": "保険金 1,000 万 / 払込済"
+      }
+    ],
+    "healthMetrics": {
+      "bmi": 25.9,
+      "bloodPressure": { "systolic": 136, "diastolic": 88 },
+      "hba1c": 6.4,
+      "ldl": 148,
+      "smoking": "past",
+      "alcoholPerWeek": 3,
+      "averageSteps": 5100,
+      "averageSleepHours": 6.1
+    }
+  }
+]

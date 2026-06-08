@@ -1,0 +1,50 @@
+[
+  {
+    "id": "b001",
+    "companyName": "株式会社 ミナト製作所",
+    "industry": "金属加工 / 製造業",
+    "revenueOku": 8.5,
+    "operatingProfitOku": 0.6,
+    "employees": 86,
+    "averageAge": 46.8,
+    "laborCostOku": 4.2,
+    "turnoverRate": 12,
+    "welfareCostPerEmployee": 48000,
+    "hasRetirementPlan": false,
+    "hasGroupInsurance": false,
+    "keyPersonDependency": "high",
+    "notes": "創業 38 年。50 代以上の熟練工が技術ノウハウを保有。後継候補は社長次男 (38 歳・部長) のみ。"
+  },
+  {
+    "id": "b002",
+    "companyName": "青葉ケアサービス株式会社",
+    "industry": "介護・福祉",
+    "revenueOku": 5.2,
+    "operatingProfitOku": 0.18,
+    "employees": 132,
+    "averageAge": 41.2,
+    "laborCostOku": 3.6,
+    "turnoverRate": 22,
+    "welfareCostPerEmployee": 32000,
+    "hasRetirementPlan": false,
+    "hasGroupInsurance": true,
+    "keyPersonDependency": "medium",
+    "notes": "訪問介護 5 拠点。離職率は業界平均 (16%) 超。腰痛・メンタル不調による休職が散発。"
+  },
+  {
+    "id": "b003",
+    "companyName": "ネクストリンク株式会社",
+    "industry": "IT サービス / SaaS",
+    "revenueOku": 12.0,
+    "operatingProfitOku": 2.1,
+    "employees": 64,
+    "averageAge": 34.5,
+    "laborCostOku": 4.8,
+    "turnoverRate": 16,
+    "welfareCostPerEmployee": 86000,
+    "hasRetirementPlan": true,
+    "hasGroupInsurance": false,
+    "keyPersonDependency": "medium",
+    "notes": "急成長フェーズ。エンジニア採用競争が激しく、リファラル採用にコスト集中。福利厚生は手厚いが団体保険は未導入。"
+  }
+]
