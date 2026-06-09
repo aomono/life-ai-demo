@@ -18,12 +18,21 @@ export type IntakeSection = {
 
 export type IntakeValues = Record<string, string>;
 
+export type ExcelPreview = {
+  sheetName: string;
+  fileName: string;
+  rowsTotal: number;
+  columns: string[];
+  rows: Array<{ id: string; cells: (string | number)[] }>;
+};
+
 export type IntakeSchema = {
   partner: {
     name: string;
     note: string;
     excelSheet: string;
   };
+  excelPreview: ExcelPreview;
   sections: IntakeSection[];
 };
 
@@ -36,6 +45,106 @@ export const healthIntakeSchema: IntakeSchema = {
     name: "全国健康保険組合連合会 (架空)",
     note: "健診結果 + ウェアラブル + 通院履歴を匿名 ID で連携",
     excelSheet: "kenpo_HC_data_2026Q2.xlsx",
+  },
+  excelPreview: {
+    sheetName: "健診_2026Q2",
+    fileName: "kenpo_HC_data_2026Q2.xlsx",
+    rowsTotal: 12482,
+    columns: [
+      "加入者ID",
+      "氏名",
+      "性別",
+      "年齢",
+      "BMI",
+      "収縮期 BP",
+      "HbA1c",
+      "LDL",
+      "喫煙",
+      "歩数(7日平均)",
+      "最終健診日",
+    ],
+    rows: [
+      {
+        id: "h001",
+        cells: [
+          "AHK-2026-h001",
+          "佐藤 健一",
+          "M",
+          45,
+          27.8,
+          142,
+          6.1,
+          156,
+          "現役",
+          4200,
+          "2026-04-12",
+        ],
+      },
+      {
+        id: "h002",
+        cells: [
+          "AHK-2026-h002",
+          "田中 美咲",
+          "F",
+          34,
+          21.4,
+          112,
+          5.3,
+          102,
+          "なし",
+          7600,
+          "2026-03-08",
+        ],
+      },
+      {
+        id: "h003",
+        cells: [
+          "AHK-2026-h003",
+          "山口 隆",
+          "M",
+          58,
+          25.9,
+          136,
+          6.4,
+          148,
+          "過去",
+          5100,
+          "2026-02-20",
+        ],
+      },
+      {
+        id: "_x1",
+        cells: [
+          "AHK-2026-x017",
+          "中島 沙織",
+          "F",
+          41,
+          23.2,
+          118,
+          5.6,
+          112,
+          "なし",
+          8200,
+          "2026-04-02",
+        ],
+      },
+      {
+        id: "_x2",
+        cells: [
+          "AHK-2026-x024",
+          "森本 達也",
+          "M",
+          52,
+          26.4,
+          138,
+          5.9,
+          138,
+          "現役",
+          5400,
+          "2026-03-26",
+        ],
+      },
+    ],
   },
   sections: [
     {
@@ -180,6 +289,100 @@ export const lifestyleIntakeSchema: IntakeSchema = {
     note: "口座・カード・電子マネー履歴を本人同意下でカテゴリ別集計",
     excelSheet: "bank_aozora_tx_2026Q2.xlsx",
   },
+  excelPreview: {
+    sheetName: "月次カテゴリ集計",
+    fileName: "bank_aozora_tx_2026Q2.xlsx",
+    rowsTotal: 38912,
+    columns: [
+      "顧客ID",
+      "氏名",
+      "対象月",
+      "ベビー用品",
+      "介護用品",
+      "住宅関連",
+      "医療・薬局",
+      "投資積立",
+      "保険料",
+      "総支出",
+    ],
+    rows: [
+      {
+        id: "l001",
+        cells: [
+          "AZB-l001",
+          "鈴木 翔太",
+          "2026-05",
+          22000,
+          0,
+          92000,
+          24000,
+          20000,
+          15000,
+          247000,
+        ],
+      },
+      {
+        id: "l002",
+        cells: [
+          "AZB-l002",
+          "中村 久美子",
+          "2026-05",
+          0,
+          32000,
+          110000,
+          28000,
+          12000,
+          22000,
+          371000,
+        ],
+      },
+      {
+        id: "l003",
+        cells: [
+          "AZB-l003",
+          "高橋 直樹",
+          "2026-05",
+          0,
+          0,
+          158000,
+          9000,
+          18000,
+          18000,
+          303000,
+        ],
+      },
+      {
+        id: "_x1",
+        cells: [
+          "AZB-x231",
+          "井上 結衣",
+          "2026-05",
+          1800,
+          0,
+          84000,
+          11000,
+          25000,
+          14000,
+          212000,
+        ],
+      },
+      {
+        id: "_x2",
+        cells: [
+          "AZB-x418",
+          "岡田 雅人",
+          "2026-05",
+          0,
+          0,
+          76000,
+          7000,
+          40000,
+          11000,
+          178000,
+        ],
+      },
+    ],
+  },
   sections: [
     {
       title: "基本情報",
@@ -300,6 +503,100 @@ export const businessIntakeSchema: IntakeSchema = {
     name: "freee 連携 (架空) + 商工リサーチ",
     note: "会計データ・人事 KPI・業界ベンチマークを集約",
     excelSheet: "saas_freee_corp_profile_2026Q2.xlsx",
+  },
+  excelPreview: {
+    sheetName: "法人プロファイル",
+    fileName: "saas_freee_corp_profile_2026Q2.xlsx",
+    rowsTotal: 4762,
+    columns: [
+      "法人番号",
+      "社名",
+      "業種",
+      "売上 (億)",
+      "営利 (億)",
+      "従業員",
+      "平均年齢",
+      "離職率 (%)",
+      "退職金",
+      "団体保険",
+    ],
+    rows: [
+      {
+        id: "b001",
+        cells: [
+          "FR-b001",
+          "株式会社 ミナト製作所",
+          "金属加工",
+          8.5,
+          0.6,
+          86,
+          46.8,
+          12,
+          "なし",
+          "未加入",
+        ],
+      },
+      {
+        id: "b002",
+        cells: [
+          "FR-b002",
+          "青葉ケアサービス株式会社",
+          "介護・福祉",
+          5.2,
+          0.18,
+          132,
+          41.2,
+          22,
+          "なし",
+          "加入",
+        ],
+      },
+      {
+        id: "b003",
+        cells: [
+          "FR-b003",
+          "ネクストリンク株式会社",
+          "IT SaaS",
+          12.0,
+          2.1,
+          64,
+          34.5,
+          16,
+          "あり",
+          "未加入",
+        ],
+      },
+      {
+        id: "_x1",
+        cells: [
+          "FR-x142",
+          "東和精機株式会社",
+          "電子部品",
+          6.8,
+          0.42,
+          74,
+          44.6,
+          11,
+          "あり",
+          "加入",
+        ],
+      },
+      {
+        id: "_x2",
+        cells: [
+          "FR-x208",
+          "株式会社 みやび物流",
+          "運送",
+          18.4,
+          0.94,
+          218,
+          48.2,
+          18,
+          "なし",
+          "加入",
+        ],
+      },
+    ],
   },
   sections: [
     {

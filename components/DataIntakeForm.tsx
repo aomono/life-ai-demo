@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import type { IntakeSchema, IntakeValues } from "@/lib/intakeSchema";
+import { ExcelPreview } from "@/components/ExcelPreview";
 
 type Props = {
   schema: IntakeSchema;
@@ -12,6 +13,7 @@ type Props = {
   isConnected: boolean;
   isAnalyzing?: boolean;
   selectorSlot?: React.ReactNode;
+  highlightExcelRowId?: string;
 };
 
 export function DataIntakeForm({
@@ -23,6 +25,7 @@ export function DataIntakeForm({
   isConnected,
   isAnalyzing = false,
   selectorSlot,
+  highlightExcelRowId,
 }: Props) {
   const totalFields = useMemo(
     () => schema.sections.reduce((acc, s) => acc + s.fields.length, 0),
@@ -62,34 +65,48 @@ export function DataIntakeForm({
 
       {selectorSlot && <div className="mb-4">{selectorSlot}</div>}
 
-      <div className="mb-5 flex flex-col gap-3 rounded-lg border border-blue-100 bg-blue-50/60 p-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex-1 text-sm">
-          <p className="font-semibold text-slate-900">
-            提携データソース: {schema.partner.name}
-          </p>
-          <p className="mt-0.5 text-xs text-slate-600">{schema.partner.note}</p>
-          <p className="mt-1 font-mono text-[11px] text-slate-500">
-            読み込み対象: {schema.partner.excelSheet}
-          </p>
+      <div className="mb-5 rounded-lg border border-blue-100 bg-blue-50/60 p-4">
+        <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex-1 text-sm">
+            <p className="font-semibold text-slate-900">
+              提携データソース: {schema.partner.name}
+            </p>
+            <p className="mt-0.5 text-xs text-slate-600">
+              {schema.partner.note}
+            </p>
+            <p className="mt-1 font-mono text-[11px] text-slate-500">
+              読み込み対象: {schema.partner.excelSheet}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onConnect}
+            disabled={isConnected}
+            className={`flex shrink-0 items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold shadow ${
+              isConnected
+                ? "cursor-default bg-emerald-100 text-emerald-700"
+                : "bg-blue-600 text-white hover:bg-blue-700"
+            }`}
+          >
+            {isConnected ? (
+              <>
+                <span aria-hidden>✓</span> 連携済み
+              </>
+            ) : (
+              <>{connectLabel}</>
+            )}
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={onConnect}
-          disabled={isConnected}
-          className={`flex shrink-0 items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold shadow ${
-            isConnected
-              ? "cursor-default bg-emerald-100 text-emerald-700"
-              : "bg-blue-600 text-white hover:bg-blue-700"
-          }`}
-        >
-          {isConnected ? (
-            <>
-              <span aria-hidden>✓</span> 連携済み
-            </>
-          ) : (
-            <>{connectLabel}</>
-          )}
-        </button>
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+          連携対象データのプレビュー (提携先で実際に保有しているデータの形)
+        </p>
+        <ExcelPreview
+          sheet={schema.excelPreview}
+          highlightId={highlightExcelRowId}
+        />
+        <p className="mt-2 text-[11px] text-slate-500">
+          ※ 上のボタンを押すと、ハイライト行のデータを匿名 ID で取得し、下のフォームに一括入力します。
+        </p>
       </div>
 
       <div className="space-y-5">

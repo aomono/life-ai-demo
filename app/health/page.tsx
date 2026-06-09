@@ -72,6 +72,7 @@ export default function HealthDemoPage() {
           onAnalyze={runAnalyze}
           isConnected={connected}
           isAnalyzing={false}
+          highlightExcelRowId={customer.id}
           selectorSlot={
             <CustomerSelector
               legend="顧客プロファイルを選択"

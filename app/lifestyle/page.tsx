@@ -78,6 +78,7 @@ export default function LifestyleDemoPage() {
           onAnalyze={runAnalyze}
           isConnected={connected}
           isAnalyzing={false}
+          highlightExcelRowId={customer.id}
           selectorSlot={
             <CustomerSelector
               legend="顧客 (家計プロファイル) を選択"

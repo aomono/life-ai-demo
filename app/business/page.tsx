@@ -70,6 +70,7 @@ export default function BusinessDemoPage() {
           onAnalyze={runAnalyze}
           isConnected={connected}
           isAnalyzing={false}
+          highlightExcelRowId={company.id}
           selectorSlot={
             <CustomerSelector
               legend="法人プロファイルを選択"
