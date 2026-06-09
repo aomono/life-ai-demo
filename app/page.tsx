@@ -22,10 +22,10 @@ export default function Home() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
             Research Prototype / Cross-industry Data × Insurance
           </p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
-            異業種データ連携で、
+          <h1 className="mt-3 max-w-5xl text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
+            異業種データ連携で
             <br />
-            保険販売を自動化・高度化する研究デモ。
+            保険販売を自動化・高度化する研究デモ
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-700">
             通常は顧客ヒアリングが必要な数十項目を、外部パートナー (健保 / 金融機関 / 会計 SaaS) との情報連携でワンクリック取得。
