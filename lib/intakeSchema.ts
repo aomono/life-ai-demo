@@ -3,6 +3,7 @@ import type {
   HealthCustomer,
   LifestyleCustomer,
   MonthlySpending,
+  WearableCustomer,
 } from "@/lib/types";
 
 export type IntakeField = {
@@ -703,5 +704,57 @@ export function mapBusinessToIntake(c: BusinessCompany): IntakeValues {
           : "低",
     notes: c.notes,
     ...synth,
+  };
+}
+
+export const wearableIntakeSchema: IntakeSchema = {
+  partner: {
+    name: "Apple Health 連携 (架空)",
+    note: "Apple Watch / iPhone Health から心拍・HRV・睡眠・歩数を連携 (本人同意済)",
+    excelSheet: "apple_health_export.json",
+  },
+  excelPreview: {
+    sheetName: "(unused)",
+    fileName: "apple_health_export.json",
+    rowsTotal: 3,
+    columns: [],
+    rows: [],
+  },
+  sections: [
+    {
+      title: "基本プロファイル",
+      fields: [
+        { key: "name", label: "氏名" },
+        { key: "ageGender", label: "年齢 / 性別" },
+        { key: "occupation", label: "職業" },
+        { key: "family", label: "家族構成" },
+      ],
+    },
+    {
+      title: "Apple Health 30 日サマリー",
+      fields: [
+        { key: "avgRestingHr", label: "平均安静時心拍" },
+        { key: "avgHrv", label: "平均 HRV (RMSSD)" },
+        { key: "avgSleepHours", label: "平均睡眠時間" },
+        { key: "avgSteps", label: "平均歩数" },
+        { key: "vo2max", label: "VO₂max (最新)" },
+      ],
+    },
+  ],
+};
+
+export function mapWearableToIntake(c: WearableCustomer): IntakeValues {
+  return {
+    name: c.name,
+    ageGender: `${c.age} 歳 / ${c.gender === "male" ? "男性" : "女性"}`,
+    occupation: c.occupation,
+    family: c.family,
+    avgRestingHr: `${c.vitalsSummary.avgRestingHr} bpm`,
+    avgHrv: `${c.vitalsSummary.avgHrv} ms`,
+    avgSleepHours: `${c.vitalsSummary.avgSleepHours.toFixed(1)} h`,
+    avgSteps: c.vitalsSummary.avgSteps.toLocaleString() + " 歩",
+    vo2max: c.vitalsSummary.vo2maxLatest
+      ? `${c.vitalsSummary.vo2maxLatest} mL/kg/min`
+      : "—",
   };
 }

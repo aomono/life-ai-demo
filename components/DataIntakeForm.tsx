@@ -14,6 +14,7 @@ type Props = {
   isAnalyzing?: boolean;
   selectorSlot?: React.ReactNode;
   highlightExcelRowId?: string;
+  previewSlot?: React.ReactNode;
 };
 
 export function DataIntakeForm({
@@ -26,6 +27,7 @@ export function DataIntakeForm({
   isAnalyzing = false,
   selectorSlot,
   highlightExcelRowId,
+  previewSlot,
 }: Props) {
   const totalFields = useMemo(
     () => schema.sections.reduce((acc, s) => acc + s.fields.length, 0),
@@ -100,10 +102,12 @@ export function DataIntakeForm({
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
           連携対象データのプレビュー (提携先で実際に保有しているデータの形)
         </p>
-        <ExcelPreview
-          sheet={schema.excelPreview}
-          highlightId={highlightExcelRowId}
-        />
+        {previewSlot ?? (
+          <ExcelPreview
+            sheet={schema.excelPreview}
+            highlightId={highlightExcelRowId}
+          />
+        )}
         <p className="mt-2 text-[11px] text-slate-500">
           ※ 上のボタンを押すと、ハイライト行のデータを匿名 ID で取得し、下のフォームに一括入力します。
         </p>

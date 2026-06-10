@@ -49,7 +49,7 @@ export default function Home() {
       <main className="mx-auto max-w-7xl px-6 py-12">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            4 つの連携シナリオ
+            5 つの連携シナリオ
           </p>
           <h2 className="mt-1 text-2xl font-bold text-slate-900">
             「顧客にヒアリングしないと埋まらなかったフォーム」を、外部データで一気に埋める。
@@ -58,7 +58,7 @@ export default function Home() {
             各シナリオで体験できるのは「① 空の入力フォーム → ② 提携先データを連携 → ③ 数十項目が一括入力 → ④ AI が個別提案を生成」というフローです。
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           <DemoCard
             href="/health"
             number="01"
@@ -106,6 +106,18 @@ export default function Home() {
               "出力: 商品ミックス + CV 想定 + 予算配分 + 差別化メッセージ",
             ]}
             cta="セグメント企画デモを見る"
+          />
+          <DemoCard
+            href="/wearable"
+            number="05"
+            title="Apple Health × リアルタイム異常検知"
+            subtitle="Apple Watch の継続バイタルから AI が異変兆候を検知。担当者画面に早期介入アラートと提案を出す。"
+            bullets={[
+              "提携先: Apple Health (架空連携)",
+              "入力: 30 日バイタル (心拍 / HRV / 睡眠 / 歩数)",
+              "出力: 異常検知 + 医療相談アシスト + 特約見直し + 架電トーク",
+            ]}
+            cta="ウェアラブル連携デモを見る"
           />
         </div>
       </main>

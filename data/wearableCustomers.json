@@ -1,0 +1,189 @@
+[
+  {
+    "id": "acute-afib",
+    "name": "田村 浩二",
+    "age": 62,
+    "gender": "male",
+    "occupation": "元自営業 (退職)",
+    "family": "妻 (60 歳) と 2 人暮らし",
+    "existingPolicies": [
+      {
+        "type": "終身保険",
+        "monthlyPremium": 18500,
+        "coverageSummary": "死亡保障 1000 万円"
+      },
+      {
+        "type": "医療保険",
+        "monthlyPremium": 7200,
+        "coverageSummary": "入院日額 5000 円 / 手術給付金 10 万円"
+      }
+    ],
+    "detectionType": "acute-afib",
+    "detectionLabel": "心房細動 (AFib) 兆候",
+    "alertSeverity": "critical",
+    "vitals30d": [
+      { "date": "2026-05-11", "restingHr": 68, "hrv": 38, "sleepScore": 78, "sleepHours": 6.8, "steps": 7200 },
+      { "date": "2026-05-12", "restingHr": 67, "hrv": 39, "sleepScore": 80, "sleepHours": 7.1, "steps": 6900 },
+      { "date": "2026-05-13", "restingHr": 69, "hrv": 37, "sleepScore": 76, "sleepHours": 6.5, "steps": 7400 },
+      { "date": "2026-05-14", "restingHr": 70, "hrv": 36, "sleepScore": 77, "sleepHours": 6.9, "steps": 7000 },
+      { "date": "2026-05-15", "restingHr": 68, "hrv": 38, "sleepScore": 78, "sleepHours": 7.0, "steps": 7300 },
+      { "date": "2026-05-16", "restingHr": 67, "hrv": 39, "sleepScore": 79, "sleepHours": 6.8, "steps": 7100 },
+      { "date": "2026-05-17", "restingHr": 69, "hrv": 37, "sleepScore": 75, "sleepHours": 6.4, "steps": 7500 },
+      { "date": "2026-05-18", "restingHr": 70, "hrv": 36, "sleepScore": 76, "sleepHours": 6.7, "steps": 7200 },
+      { "date": "2026-05-19", "restingHr": 71, "hrv": 35, "sleepScore": 75, "sleepHours": 6.5, "steps": 7000 },
+      { "date": "2026-05-20", "restingHr": 70, "hrv": 36, "sleepScore": 77, "sleepHours": 6.8, "steps": 7100 },
+      { "date": "2026-05-21", "restingHr": 72, "hrv": 34, "sleepScore": 74, "sleepHours": 6.3, "steps": 7300 },
+      { "date": "2026-05-22", "restingHr": 71, "hrv": 35, "sleepScore": 75, "sleepHours": 6.6, "steps": 7000 },
+      { "date": "2026-05-23", "restingHr": 73, "hrv": 33, "sleepScore": 72, "sleepHours": 6.2, "steps": 6900 },
+      { "date": "2026-05-24", "restingHr": 74, "hrv": 32, "sleepScore": 71, "sleepHours": 6.0, "steps": 6700 },
+      { "date": "2026-05-25", "restingHr": 76, "hrv": 31, "sleepScore": 70, "sleepHours": 5.9, "steps": 6400, "anomalyFlag": "info" },
+      { "date": "2026-05-26", "restingHr": 78, "hrv": 29, "sleepScore": 68, "sleepHours": 5.7, "steps": 6100, "anomalyFlag": "warn" },
+      { "date": "2026-05-27", "restingHr": 82, "hrv": 26, "sleepScore": 64, "sleepHours": 5.4, "steps": 5800, "anomalyFlag": "warn" },
+      { "date": "2026-05-28", "restingHr": 86, "hrv": 24, "sleepScore": 60, "sleepHours": 5.2, "steps": 5500, "anomalyFlag": "warn" },
+      { "date": "2026-05-29", "restingHr": 91, "hrv": 22, "sleepScore": 56, "sleepHours": 5.0, "steps": 5200, "anomalyFlag": "critical" },
+      { "date": "2026-05-30", "restingHr": 95, "hrv": 20, "sleepScore": 52, "sleepHours": 4.8, "steps": 4900, "anomalyFlag": "critical" },
+      { "date": "2026-05-31", "restingHr": 98, "hrv": 19, "sleepScore": 50, "sleepHours": 4.6, "steps": 4700, "anomalyFlag": "critical" },
+      { "date": "2026-06-01", "restingHr": 102, "hrv": 17, "sleepScore": 48, "sleepHours": 4.4, "steps": 4500, "anomalyFlag": "critical" },
+      { "date": "2026-06-02", "restingHr": 99, "hrv": 18, "sleepScore": 50, "sleepHours": 4.5, "steps": 4600, "anomalyFlag": "critical" },
+      { "date": "2026-06-03", "restingHr": 96, "hrv": 19, "sleepScore": 52, "sleepHours": 4.7, "steps": 4800, "anomalyFlag": "critical" },
+      { "date": "2026-06-04", "restingHr": 94, "hrv": 20, "sleepScore": 54, "sleepHours": 4.9, "steps": 5000, "anomalyFlag": "critical" },
+      { "date": "2026-06-05", "restingHr": 91, "hrv": 22, "sleepScore": 56, "sleepHours": 5.1, "steps": 5200, "anomalyFlag": "critical" },
+      { "date": "2026-06-06", "restingHr": 89, "hrv": 23, "sleepScore": 58, "sleepHours": 5.3, "steps": 5400, "anomalyFlag": "critical" },
+      { "date": "2026-06-07", "restingHr": 87, "hrv": 25, "sleepScore": 60, "sleepHours": 5.5, "steps": 5600, "anomalyFlag": "warn" },
+      { "date": "2026-06-08", "restingHr": 85, "hrv": 26, "sleepScore": 62, "sleepHours": 5.7, "steps": 5800, "anomalyFlag": "warn" },
+      { "date": "2026-06-09", "restingHr": 84, "hrv": 27, "sleepScore": 64, "sleepHours": 5.9, "steps": 6000, "anomalyFlag": "warn" }
+    ],
+    "vitalsSummary": {
+      "avgRestingHr": 82,
+      "avgHrv": 27,
+      "avgSleepScore": 64,
+      "avgSleepHours": 5.8,
+      "avgSteps": 6080,
+      "vo2maxLatest": 28
+    },
+    "callScript": "田村様、いつもお世話になっております。最近 Apple Watch のデータで安静時心拍が大きく上昇傾向だったのが気になりまして、ご体調いかがでしょうか。実は循環器系のリスク兆候の可能性があるので、提携クリニックでの早期検査をご案内できます。あわせて、心疾患保障の特約を見直すと月額数百円で 1000 万円の上乗せができますので、ご検討いただけますでしょうか。"
+  },
+  {
+    "id": "chronic-stress",
+    "name": "西山 紗英",
+    "age": 42,
+    "gender": "female",
+    "occupation": "IT エンジニア (リードエンジニア)",
+    "family": "夫 (44 歳) + 子 1 人 (中 2)",
+    "existingPolicies": [
+      {
+        "type": "医療保険",
+        "monthlyPremium": 5800,
+        "coverageSummary": "入院日額 10000 円 / 女性疾病特約"
+      }
+    ],
+    "detectionType": "chronic-stress",
+    "detectionLabel": "メンタル不調リスク (慢性ストレス)",
+    "alertSeverity": "warn",
+    "vitals30d": [
+      { "date": "2026-05-11", "restingHr": 64, "hrv": 52, "sleepScore": 82, "sleepHours": 7.2, "steps": 8400 },
+      { "date": "2026-05-12", "restingHr": 65, "hrv": 51, "sleepScore": 81, "sleepHours": 7.1, "steps": 8600 },
+      { "date": "2026-05-13", "restingHr": 64, "hrv": 50, "sleepScore": 80, "sleepHours": 7.0, "steps": 8200 },
+      { "date": "2026-05-14", "restingHr": 65, "hrv": 49, "sleepScore": 79, "sleepHours": 6.9, "steps": 8000 },
+      { "date": "2026-05-15", "restingHr": 66, "hrv": 48, "sleepScore": 77, "sleepHours": 6.8, "steps": 7800 },
+      { "date": "2026-05-16", "restingHr": 67, "hrv": 46, "sleepScore": 75, "sleepHours": 6.6, "steps": 7600 },
+      { "date": "2026-05-17", "restingHr": 67, "hrv": 45, "sleepScore": 74, "sleepHours": 6.5, "steps": 7400 },
+      { "date": "2026-05-18", "restingHr": 68, "hrv": 43, "sleepScore": 72, "sleepHours": 6.3, "steps": 7200 },
+      { "date": "2026-05-19", "restingHr": 68, "hrv": 41, "sleepScore": 70, "sleepHours": 6.2, "steps": 7000, "anomalyFlag": "info" },
+      { "date": "2026-05-20", "restingHr": 69, "hrv": 39, "sleepScore": 68, "sleepHours": 6.0, "steps": 6800, "anomalyFlag": "info" },
+      { "date": "2026-05-21", "restingHr": 70, "hrv": 37, "sleepScore": 66, "sleepHours": 5.9, "steps": 6600, "anomalyFlag": "info" },
+      { "date": "2026-05-22", "restingHr": 71, "hrv": 35, "sleepScore": 64, "sleepHours": 5.7, "steps": 6500, "anomalyFlag": "warn" },
+      { "date": "2026-05-23", "restingHr": 72, "hrv": 33, "sleepScore": 62, "sleepHours": 5.5, "steps": 6300, "anomalyFlag": "warn" },
+      { "date": "2026-05-24", "restingHr": 73, "hrv": 31, "sleepScore": 60, "sleepHours": 5.4, "steps": 6100, "anomalyFlag": "warn" },
+      { "date": "2026-05-25", "restingHr": 74, "hrv": 29, "sleepScore": 58, "sleepHours": 5.2, "steps": 5900, "anomalyFlag": "warn" },
+      { "date": "2026-05-26", "restingHr": 75, "hrv": 28, "sleepScore": 56, "sleepHours": 5.0, "steps": 5700, "anomalyFlag": "warn" },
+      { "date": "2026-05-27", "restingHr": 76, "hrv": 27, "sleepScore": 54, "sleepHours": 4.9, "steps": 5500, "anomalyFlag": "warn" },
+      { "date": "2026-05-28", "restingHr": 76, "hrv": 26, "sleepScore": 52, "sleepHours": 4.8, "steps": 5400, "anomalyFlag": "warn" },
+      { "date": "2026-05-29", "restingHr": 77, "hrv": 25, "sleepScore": 50, "sleepHours": 4.7, "steps": 5200, "anomalyFlag": "warn" },
+      { "date": "2026-05-30", "restingHr": 77, "hrv": 24, "sleepScore": 49, "sleepHours": 4.6, "steps": 5100, "anomalyFlag": "warn" },
+      { "date": "2026-05-31", "restingHr": 78, "hrv": 24, "sleepScore": 48, "sleepHours": 4.5, "steps": 5000, "anomalyFlag": "warn" },
+      { "date": "2026-06-01", "restingHr": 78, "hrv": 23, "sleepScore": 47, "sleepHours": 4.5, "steps": 4900, "anomalyFlag": "warn" },
+      { "date": "2026-06-02", "restingHr": 79, "hrv": 23, "sleepScore": 46, "sleepHours": 4.4, "steps": 4800, "anomalyFlag": "warn" },
+      { "date": "2026-06-03", "restingHr": 79, "hrv": 22, "sleepScore": 45, "sleepHours": 4.4, "steps": 4700, "anomalyFlag": "warn" },
+      { "date": "2026-06-04", "restingHr": 80, "hrv": 22, "sleepScore": 45, "sleepHours": 4.3, "steps": 4700, "anomalyFlag": "warn" },
+      { "date": "2026-06-05", "restingHr": 80, "hrv": 21, "sleepScore": 44, "sleepHours": 4.3, "steps": 4600, "anomalyFlag": "warn" },
+      { "date": "2026-06-06", "restingHr": 81, "hrv": 21, "sleepScore": 44, "sleepHours": 4.2, "steps": 4600, "anomalyFlag": "warn" },
+      { "date": "2026-06-07", "restingHr": 81, "hrv": 21, "sleepScore": 43, "sleepHours": 4.2, "steps": 4500, "anomalyFlag": "warn" },
+      { "date": "2026-06-08", "restingHr": 82, "hrv": 20, "sleepScore": 43, "sleepHours": 4.1, "steps": 4500, "anomalyFlag": "warn" },
+      { "date": "2026-06-09", "restingHr": 82, "hrv": 20, "sleepScore": 42, "sleepHours": 4.1, "steps": 4400, "anomalyFlag": "warn" }
+    ],
+    "vitalsSummary": {
+      "avgRestingHr": 73,
+      "avgHrv": 32,
+      "avgSleepScore": 60,
+      "avgSleepHours": 5.5,
+      "avgSteps": 6240,
+      "vo2maxLatest": 32
+    },
+    "callScript": "西山様、いつも当社サービスをご利用いただきありがとうございます。最近、Apple Watch の睡眠スコアと心拍変動が 2 週間ほど低下傾向で、お忙しいのではないかと心配しております。同世代のリードエンジニアの方々で同じパターンが出る方が増えており、提携カウンセリングプログラムをご紹介できます。あわせて、女性向けメンタル特約 (月額 800 円) の見直しもこの機会にいかがでしょうか。"
+  },
+  {
+    "id": "prodromal-lifestyle",
+    "name": "谷川 啓介",
+    "age": 54,
+    "gender": "male",
+    "occupation": "営業部長 (商社)",
+    "family": "妻 + 子 2 人 (大学生・社会人)",
+    "existingPolicies": [
+      {
+        "type": "定期保険",
+        "monthlyPremium": 9800,
+        "coverageSummary": "死亡保障 3000 万円 (60 歳まで)"
+      },
+      {
+        "type": "医療保険",
+        "monthlyPremium": 6400,
+        "coverageSummary": "入院日額 7000 円"
+      }
+    ],
+    "detectionType": "prodromal-lifestyle",
+    "detectionLabel": "生活習慣病リスク兆候",
+    "alertSeverity": "info",
+    "vitals30d": [
+      { "date": "2026-05-11", "restingHr": 62, "hrv": 44, "sleepScore": 76, "sleepHours": 6.9, "steps": 9800 },
+      { "date": "2026-05-12", "restingHr": 63, "hrv": 43, "sleepScore": 75, "sleepHours": 6.8, "steps": 9600 },
+      { "date": "2026-05-13", "restingHr": 62, "hrv": 44, "sleepScore": 76, "sleepHours": 6.9, "steps": 9500 },
+      { "date": "2026-05-14", "restingHr": 63, "hrv": 42, "sleepScore": 75, "sleepHours": 6.8, "steps": 9400 },
+      { "date": "2026-05-15", "restingHr": 63, "hrv": 42, "sleepScore": 74, "sleepHours": 6.7, "steps": 9200 },
+      { "date": "2026-05-16", "restingHr": 64, "hrv": 41, "sleepScore": 74, "sleepHours": 6.7, "steps": 9000 },
+      { "date": "2026-05-17", "restingHr": 64, "hrv": 41, "sleepScore": 73, "sleepHours": 6.6, "steps": 8800 },
+      { "date": "2026-05-18", "restingHr": 65, "hrv": 40, "sleepScore": 73, "sleepHours": 6.6, "steps": 8500 },
+      { "date": "2026-05-19", "restingHr": 65, "hrv": 39, "sleepScore": 72, "sleepHours": 6.5, "steps": 8200 },
+      { "date": "2026-05-20", "restingHr": 66, "hrv": 38, "sleepScore": 72, "sleepHours": 6.5, "steps": 7800, "anomalyFlag": "info" },
+      { "date": "2026-05-21", "restingHr": 66, "hrv": 37, "sleepScore": 71, "sleepHours": 6.4, "steps": 7400, "anomalyFlag": "info" },
+      { "date": "2026-05-22", "restingHr": 67, "hrv": 36, "sleepScore": 71, "sleepHours": 6.4, "steps": 7000, "anomalyFlag": "info" },
+      { "date": "2026-05-23", "restingHr": 67, "hrv": 36, "sleepScore": 70, "sleepHours": 6.3, "steps": 6600, "anomalyFlag": "info" },
+      { "date": "2026-05-24", "restingHr": 68, "hrv": 35, "sleepScore": 70, "sleepHours": 6.3, "steps": 6200, "anomalyFlag": "info" },
+      { "date": "2026-05-25", "restingHr": 68, "hrv": 34, "sleepScore": 69, "sleepHours": 6.2, "steps": 5800, "anomalyFlag": "info" },
+      { "date": "2026-05-26", "restingHr": 69, "hrv": 34, "sleepScore": 69, "sleepHours": 6.2, "steps": 5500, "anomalyFlag": "info" },
+      { "date": "2026-05-27", "restingHr": 69, "hrv": 33, "sleepScore": 68, "sleepHours": 6.1, "steps": 5200, "anomalyFlag": "info" },
+      { "date": "2026-05-28", "restingHr": 70, "hrv": 33, "sleepScore": 68, "sleepHours": 6.1, "steps": 5000, "anomalyFlag": "info" },
+      { "date": "2026-05-29", "restingHr": 70, "hrv": 32, "sleepScore": 67, "sleepHours": 6.0, "steps": 4800, "anomalyFlag": "info" },
+      { "date": "2026-05-30", "restingHr": 71, "hrv": 32, "sleepScore": 67, "sleepHours": 6.0, "steps": 4600, "anomalyFlag": "info" },
+      { "date": "2026-05-31", "restingHr": 71, "hrv": 31, "sleepScore": 66, "sleepHours": 5.9, "steps": 4400, "anomalyFlag": "info" },
+      { "date": "2026-06-01", "restingHr": 72, "hrv": 31, "sleepScore": 66, "sleepHours": 5.9, "steps": 4300, "anomalyFlag": "info" },
+      { "date": "2026-06-02", "restingHr": 72, "hrv": 30, "sleepScore": 65, "sleepHours": 5.8, "steps": 4200, "anomalyFlag": "info" },
+      { "date": "2026-06-03", "restingHr": 73, "hrv": 30, "sleepScore": 65, "sleepHours": 5.8, "steps": 4100, "anomalyFlag": "info" },
+      { "date": "2026-06-04", "restingHr": 73, "hrv": 29, "sleepScore": 64, "sleepHours": 5.7, "steps": 4000, "anomalyFlag": "info" },
+      { "date": "2026-06-05", "restingHr": 74, "hrv": 29, "sleepScore": 64, "sleepHours": 5.7, "steps": 3900, "anomalyFlag": "info" },
+      { "date": "2026-06-06", "restingHr": 74, "hrv": 28, "sleepScore": 63, "sleepHours": 5.6, "steps": 3800, "anomalyFlag": "info" },
+      { "date": "2026-06-07", "restingHr": 75, "hrv": 28, "sleepScore": 63, "sleepHours": 5.6, "steps": 3700, "anomalyFlag": "info" },
+      { "date": "2026-06-08", "restingHr": 75, "hrv": 27, "sleepScore": 62, "sleepHours": 5.5, "steps": 3600, "anomalyFlag": "info" },
+      { "date": "2026-06-09", "restingHr": 76, "hrv": 27, "sleepScore": 62, "sleepHours": 5.5, "steps": 3500, "anomalyFlag": "info" }
+    ],
+    "vitalsSummary": {
+      "avgRestingHr": 69,
+      "avgHrv": 34,
+      "avgSleepScore": 68,
+      "avgSleepHours": 6.2,
+      "avgSteps": 6320,
+      "vo2maxLatest": 34
+    },
+    "callScript": "谷川様、いつもお世話になっております。最近 Apple Watch のデータで歩数が大きく落ち込んできているのと、安静時心拍がじわじわ上昇傾向です。お仕事お忙しいかと思いますが、生活習慣病の予兆として早めに整えていきたいタイミングなので、提携の健康増進プログラムを 1 回ご案内できます。あわせて、医療特約に三大疾病カバーを追加すると月額数百円で安心が広がりますので、ご検討いかがでしょうか。"
+  }
+]
