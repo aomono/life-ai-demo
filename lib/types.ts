@@ -150,3 +150,42 @@ export type SegmentProposal = {
   totalBudgetYen: number;
   competitiveDifferentiation: string[];
 };
+
+export type DetectionType =
+  | "acute-afib"
+  | "chronic-stress"
+  | "prodromal-lifestyle";
+
+export type DailyVitals = {
+  date: string;
+  restingHr: number;
+  hrv: number;
+  sleepScore: number;
+  sleepHours: number;
+  steps: number;
+  vo2max?: number;
+  anomalyFlag?: "info" | "warn" | "critical";
+};
+
+export type WearableCustomer = {
+  id: DetectionType;
+  name: string;
+  age: number;
+  gender: "male" | "female";
+  occupation: string;
+  family: string;
+  existingPolicies: ExistingPolicy[];
+  detectionType: DetectionType;
+  detectionLabel: string;
+  alertSeverity: "critical" | "warn" | "info";
+  vitals30d: DailyVitals[];
+  vitalsSummary: {
+    avgRestingHr: number;
+    avgHrv: number;
+    avgSleepScore: number;
+    avgSleepHours: number;
+    avgSteps: number;
+    vo2maxLatest?: number;
+  };
+  callScript: string;
+};
