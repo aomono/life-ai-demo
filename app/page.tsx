@@ -49,7 +49,7 @@ export default function Home() {
       <main className="mx-auto max-w-7xl px-6 py-12">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            3 つの連携シナリオ
+            4 つの連携シナリオ
           </p>
           <h2 className="mt-1 text-2xl font-bold text-slate-900">
             「顧客にヒアリングしないと埋まらなかったフォーム」を、外部データで一気に埋める。
@@ -58,7 +58,7 @@ export default function Home() {
             各シナリオで体験できるのは「① 空の入力フォーム → ② 提携先データを連携 → ③ 数十項目が一括入力 → ④ AI が個別提案を生成」というフローです。
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           <DemoCard
             href="/health"
             number="01"
@@ -94,6 +94,18 @@ export default function Home() {
               "出力: 団体保険 / 経営者保険 / 福利厚生 提案論点",
             ]}
             cta="会計 SaaS 連携デモを見る"
+          />
+          <DemoCard
+            href="/segment"
+            number="04"
+            title="異業種マーケ DB × セグメント営業企画"
+            subtitle="全国 4,200 万世帯の見込み客 DB から、AI がプリセットセグメントと推奨アプローチを 30 秒で起こす。"
+            bullets={[
+              "提携先: モバイル / カード / 不動産 / 国勢調査 (架空)",
+              "入力: プリセット 3 + チップ条件カスタム",
+              "出力: 商品ミックス + CV 想定 + 予算配分 + 差別化メッセージ",
+            ]}
+            cta="セグメント企画デモを見る"
           />
         </div>
       </main>
