@@ -1,0 +1,86 @@
+[
+  {
+    "presetId": "millennial-family",
+    "productMix": [
+      { "name": "学資保険 (積立型)", "priority": "main", "adoptionRate": 32 },
+      { "name": "総合医療保険", "priority": "main", "adoptionRate": 28 },
+      { "name": "三大疾病特約", "priority": "recommended", "adoptionRate": 18 },
+      { "name": "就業不能保障", "priority": "optional", "adoptionRate": 9 }
+    ],
+    "approachStory": [
+      "子供の将来不安を「金額」と「タイミング」で見える化",
+      "家計を圧迫しない月額 1.5 万円以内の積立設計",
+      "夫婦どちらかに何かあっても教育費は守れる安心"
+    ],
+    "expectedCvRate": 4.2,
+    "industryAverageCvRate": 1.8,
+    "ltvPerCustomer": 324000,
+    "channelAllocation": [
+      { "channel": "dm", "sharePct": 18, "budgetYen": 21600000, "estimatedReach": 38000 },
+      { "channel": "line", "sharePct": 47, "budgetYen": 56400000, "estimatedReach": 92000 },
+      { "channel": "face-to-face", "sharePct": 35, "budgetYen": 42000000, "estimatedReach": 12000 }
+    ],
+    "totalBudgetYen": 120000000,
+    "competitiveDifferentiation": [
+      "他社「保障の手厚さ」訴求に対し、当社は AI 家計シミュレーション付帯で「やりくり感」を提示",
+      "解約せず減額・払済への切替を画面上で示し、柔軟性で差別化",
+      "夫婦両者の保障設計をワンセットで提案し、世帯単位の納得感を作る"
+    ]
+  },
+  {
+    "presetId": "dinks",
+    "productMix": [
+      { "name": "がん保険 (一時金 + 通院)", "priority": "main", "adoptionRate": 26 },
+      { "name": "団信上乗せ (収入保障)", "priority": "main", "adoptionRate": 22 },
+      { "name": "夫婦型損保パッケージ", "priority": "recommended", "adoptionRate": 17 },
+      { "name": "個人年金 (iDeCo 補完)", "priority": "optional", "adoptionRate": 11 }
+    ],
+    "approachStory": [
+      "住宅取得タイミングで「ローン × 健康 × 老後」をひと続きで整理",
+      "共働きならではの片働き化リスクを収入保障で押さえる",
+      "がんは 30-40 代でも他人事ではないファクトを数字で提示"
+    ],
+    "expectedCvRate": 3.6,
+    "industryAverageCvRate": 1.5,
+    "ltvPerCustomer": 412000,
+    "channelAllocation": [
+      { "channel": "dm", "sharePct": 12, "budgetYen": 14400000, "estimatedReach": 26000 },
+      { "channel": "line", "sharePct": 52, "budgetYen": 62400000, "estimatedReach": 78000 },
+      { "channel": "face-to-face", "sharePct": 36, "budgetYen": 43200000, "estimatedReach": 9800 }
+    ],
+    "totalBudgetYen": 120000000,
+    "competitiveDifferentiation": [
+      "他社「住宅ローンと一体で提案」訴求に対し、当社は住宅取得前から AI でローン耐性診断を実施",
+      "夫婦両者の老後資金シミュレーションを画面で同時表示し、世帯設計の納得感を作る",
+      "がん × 収入保障 × 個人年金の組合せ最適化を AI が即時提示"
+    ]
+  },
+  {
+    "presetId": "presenior-inheritance",
+    "productMix": [
+      { "name": "一時払い終身 (相続対策)", "priority": "main", "adoptionRate": 24 },
+      { "name": "介護保障特約", "priority": "main", "adoptionRate": 21 },
+      { "name": "認知症診断一時金", "priority": "recommended", "adoptionRate": 14 },
+      { "name": "贈与型年金", "priority": "optional", "adoptionRate": 8 }
+    ],
+    "approachStory": [
+      "親の介護と自分自身の備え、両方を 1 つのプランで一気通貫",
+      "相続税対策と孫世代への贈与を「保険でやる」選択肢を提示",
+      "認知症リスクを「家族会議のきっかけ」として柔らかく差し込む"
+    ],
+    "expectedCvRate": 2.9,
+    "industryAverageCvRate": 1.2,
+    "ltvPerCustomer": 786000,
+    "channelAllocation": [
+      { "channel": "dm", "sharePct": 28, "budgetYen": 33600000, "estimatedReach": 42000 },
+      { "channel": "line", "sharePct": 22, "budgetYen": 26400000, "estimatedReach": 28000 },
+      { "channel": "face-to-face", "sharePct": 50, "budgetYen": 60000000, "estimatedReach": 15600 }
+    ],
+    "totalBudgetYen": 120000000,
+    "competitiveDifferentiation": [
+      "他社「相続対策の入口は税理士」訴求に対し、当社は AI 家系図 × 試算で家族会議そのものを支援",
+      "介護 × 認知症 × 終身をワンプランで提示する設計力で差別化",
+      "孫世代への贈与型年金まで含む 3 世代パッケージは業界唯一"
+    ]
+  }
+]
