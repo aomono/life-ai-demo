@@ -1,0 +1,50 @@
+[
+  {
+    "id": "millennial-family",
+    "label": "子育てミレニアル",
+    "description": "30 代既婚、未就学児あり、都市部の世帯年収 600-1000 万円層",
+    "baseChips": {
+      "ageRange": [30, 39],
+      "incomeRange": [600, 1000],
+      "marital": ["married"],
+      "children": ["preschool"],
+      "region": ["metro"],
+      "housing": ["rented", "owned-condo"],
+      "lifeEvents": [],
+      "existingPolicies": ["life-only", "medical-only", "none"]
+    },
+    "baseHeadcount": 124000
+  },
+  {
+    "id": "dinks",
+    "label": "DINKS 30-40 代",
+    "description": "共働き子なし、世帯年収 800-1500 万円、住宅取得検討中",
+    "baseChips": {
+      "ageRange": [30, 44],
+      "incomeRange": [800, 1500],
+      "marital": ["married"],
+      "children": ["none"],
+      "region": ["metro", "prefecture"],
+      "housing": ["rented", "owned-condo"],
+      "lifeEvents": ["home-buying"],
+      "existingPolicies": ["medical-only", "none", "non-life-only"]
+    },
+    "baseHeadcount": 87000
+  },
+  {
+    "id": "presenior-inheritance",
+    "label": "プレシニア相続期",
+    "description": "50-64 歳、子独立、世帯年収 800-1500 万円、持家あり、親介護段階",
+    "baseChips": {
+      "ageRange": [50, 64],
+      "incomeRange": [800, 1500],
+      "marital": ["married"],
+      "children": ["independent"],
+      "region": ["metro", "prefecture"],
+      "housing": ["owned-house", "owned-condo"],
+      "lifeEvents": ["care-start", "inheritance"],
+      "existingPolicies": ["multiple", "life-only"]
+    },
+    "baseHeadcount": 156000
+  }
+]
