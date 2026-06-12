@@ -18,3 +18,20 @@ body {
   font-family: var(--font-geist-sans), "Hiragino Sans", "Yu Gothic", "Meiryo",
     system-ui, -apple-system, sans-serif;
 }
+
+/* --- Demo 06: Agent Orchestra（このプレフィックス以外に影響させない） --- */
+@keyframes orchestra-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes orchestra-pop {
+  0% { opacity: 0; transform: translateY(6px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes orchestra-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.orchestra-pulse { animation: orchestra-pulse 1.6s ease-in-out infinite; }
+.orchestra-pop { animation: orchestra-pop 0.45s ease-out both; }
+.orchestra-caret { animation: orchestra-caret 0.9s steps(1) infinite; }
