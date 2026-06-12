@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
+import scenariosData from "@/data/orchestraScenarios.json";
+import healthData from "@/data/healthCustomers.json";
 import {
+  type OrchestraEvent,
   type OrchestraScenario,
   visibleEvents,
   agentStatuses,
@@ -7,8 +10,12 @@ import {
   proposalSlots,
   logEntries,
   isComplete,
+  AGENT_IDS,
+  PROPOSAL_SLOTS,
   DEFAULT_HANDOFF_WINDOW_MS,
 } from "./orchestra";
+
+const SCENARIOS = scenariosData as OrchestraScenario[];
 
 const MINI: OrchestraScenario = {
   customerId: "h001",
@@ -118,4 +125,63 @@ describe("isComplete", () => {
     expect(isComplete(MINI, 9_999)).toBe(false);
     expect(isComplete(MINI, 10_000)).toBe(true);
   });
+});
+
+describe("orchestraScenarios.json 整合性", () => {
+  it("healthCustomers の全顧客にシナリオがある", () => {
+    const customerIds = (healthData as { id: string }[]).map((c) => c.id);
+    expect(SCENARIOS.map((s) => s.customerId).sort()).toEqual(customerIds.sort());
+  });
+
+  it.each(SCENARIOS.map((s) => [s.customerId, s] as const))(
+    "%s: イベントが at 昇順・id ユニーク・参照が正しい",
+    (_id, s) => {
+      const ids = new Set<string>();
+      let prev = -1;
+      for (const e of s.events) {
+        expect(e.at).toBeGreaterThanOrEqual(prev);
+        prev = e.at;
+        expect(ids.has(e.id)).toBe(false);
+        ids.add(e.id);
+        expect(AGENT_IDS).toContain(e.agent);
+        if (e.type === "handoff") expect(AGENT_IDS).toContain(e.to!);
+        if (e.type === "status") expect(e.status).toBeTruthy();
+        if (e.type === "artifact") {
+          expect(PROPOSAL_SLOTS).toContain(e.artifact!.slot);
+          expect(e.artifact!.revision).toBeGreaterThanOrEqual(1);
+        }
+        if (e.type === "verdict") expect(e.text).toBeTruthy();
+        if (e.type === "message") expect(e.text).toBeTruthy();
+        expect(e.at).toBeLessThanOrEqual(s.durationMs);
+      }
+    },
+  );
+
+  it.each(SCENARIOS.map((s) => [s.customerId, s] as const))(
+    "%s: 差し戻し→承認のドラマが必ず1回ずつある",
+    (_id, s) => {
+      const verdicts = s.events
+        .filter((e): e is OrchestraEvent & { verdict: string } => e.type === "verdict")
+        .map((e) => e.verdict);
+      expect(verdicts).toEqual(["rejected", "approved"]);
+    },
+  );
+
+  it.each(SCENARIOS.map((s) => [s.customerId, s] as const))(
+    "%s: 全 slot が最終的に埋まり、headline と coverage は v2 まである",
+    (_id, s) => {
+      const finalSlots = proposalSlots(s, s.durationMs);
+      for (const slot of PROPOSAL_SLOTS) expect(finalSlots[slot]).not.toBeNull();
+      expect(finalSlots.headline!.revision).toBe(2);
+      expect(finalSlots.coverage!.revision).toBe(2);
+    },
+  );
+
+  it.each(SCENARIOS.map((s) => [s.customerId, s] as const))(
+    "%s: 完了時点で全エージェントが done",
+    (_id, s) => {
+      const statuses = agentStatuses(s, s.durationMs);
+      for (const a of AGENT_IDS) expect(statuses[a]).toBe("done");
+    },
+  );
 });
